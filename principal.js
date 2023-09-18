@@ -12,4 +12,14 @@ eq2grau = (a,b,c) => {
     return "x1" + div(soma(-b,raiz(delta)),mult(2,a)) +
     "x2" + div(sub(-b,raiz(delta)),mult(2,a));
 }
-escrever(equ2grau(1,3,-8));
+let a = "";
+let b = "";
+let op = "";
+let resultado = 0;
+
+
+function digitando(tecla){
+    a =+ tecla;
+    alert(a);
+}
+
