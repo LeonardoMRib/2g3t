@@ -15,11 +15,44 @@ eq2grau = (a,b,c) => {
 let a = "";
 let b = "";
 let op = "";
-let resultado = 0;
+let valor = "";
+let tem_ponto =false;
+function mostra_resultado(resul){
+    document.getElementById("resultado").value = resul;
+}
+function operacao(nova_op){
+    op = nova_op;
+    a = valor;
+    valor = "";
+    tem_ponto = false;
+}
+function calcula(){
+    if(op != ""){
+        b = valor;
+        if(op =="soma") mostra_resultado(soma(a,b));
+        if(op =="sub") mostra_resultado(sub(a,b));
+        if(op =="div") mostra_resultado(div(a,b));
+        if(op =="mult") mostra_resultado(mult(a,b));
+        a = "";
+        b = "";
+        tem_ponto = false;
+
+    }
+}
 
 
 function digitando(tecla){
-    a =+ tecla;
-    alert(a);
+    if(tecla == "."){
+        if(!tem_ponto){
+            valor = valor + tecla;
+            mostra_resultado(valor);
+            tem_ponto = true;
+
+        }
+        return;
+    }
+    valor = valor + tecla;
+    mostra_resultado(valor);
 }
+
 
