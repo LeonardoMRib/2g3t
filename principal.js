@@ -17,7 +17,33 @@ let b = "";
 let op = "";
 let valor = "";
 let tem_ponto =false;
+let desligada = true;
+function zerar(){
+    if(desligada) return;
+    a = "";
+    b = "";
+    op = "";
+    valor = "";
+    tem_ponto = false;
+    mostra_resultado(0);
+}
+
+function desligar(){
+   if (desligada){
+    desligada = false;
+    zerar();
+   }else{
+    zerar();
+    desligada = true;
+    mostra_resultado("");
+   }
+   return desligada;
+}
+
+
+
 function mostra_resultado(resul){
+    if(desligada) return;
     document.getElementById("resultado").value = resul;
 }
 function operacao(nova_op){
