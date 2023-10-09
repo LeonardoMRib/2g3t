@@ -17,7 +17,20 @@ let b = "";
 let op = "";
 let valor = "";
 let tem_ponto =false;
-let desligada = true;
+let desligada = false;
+
+function porcentagem(){
+    if(op == "mult"){
+        mostra_resultado(div(mult(a,valor),100));
+        a = "";
+        valor = "";
+    }
+}
+
+function raiz_quadrada(){
+    mostra_resultado(raiz(valor));
+    valor = "";
+}
 function zerar(){
     if(desligada) return;
     a = "";
