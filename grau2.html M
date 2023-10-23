@@ -11,12 +11,6 @@
     Nome: <input type="text" id="nome"><br>
 
     <button onclick="inserir_ultimo()">Inserir Ultimo</button><br>
-    <button onclick="inserir_primeiro()">Inserir Primeiro</button><br>
-    <button onclick="deletar_primeiro()">Deletar Pimeiro</button><br>
-    <button onclick="deletar_ultimo()">Deletar Ultimo</button><br>
-    <button onclick="limpar_lista()">Nova Lista</button><br>
-    <button onclick="ordenar_az()">Ordenar AZ</button><br>
-    <button onclick="ordenar_za()">Ordenar ZA</button><br>
 
     <span id="lista"></span>
 
